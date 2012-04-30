@@ -16,7 +16,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit starter-kit-ruby starter-kit-js starter-kit-lisp starter-kit-bindings yaml-mode rvm rspec-mode rinari anything ruby-mode color-theme-blackboard full-ack)
+(defvar my-packages '(starter-kit starter-kit-ruby starter-kit-js starter-kit-lisp starter-kit-bindings yaml-mode rvm rspec-mode rinari anything ruby-mode full-ack)
   "A list of packages to ensure are installed at launch.")
 
 (dolist (p my-packages)
