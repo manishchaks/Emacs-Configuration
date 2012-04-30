@@ -32,3 +32,25 @@
   (when buffer-file-name (save-buffer)))
 (defadvice other-frame (before other-frame-now activate)
   (when buffer-file-name (save-buffer)))
+
+;; ========= Set colours ==========
+
+;; Set cursor and mouse-pointer colours
+(set-cursor-color "red")
+(set-mouse-color "goldenrod")
+
+;; Set region background colour
+(set-foreground-color "white")
+
+;; Set emacs background colour
+(set-background-color "black")
+
+
+;; Require YAML-Mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+;; ENTER key in Emacs does 'newline-and-indent'
+(add-hook 'yaml-mode-hook
+      '(lambda ()
+        (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
