@@ -36,14 +36,14 @@
 ;; ========= Set colours ==========
 
 ;; Set cursor and mouse-pointer colours
-(set-cursor-color "red")
+(set-cursor-color "white")
 (set-mouse-color "goldenrod")
 
 ;; Set region background colour
-(set-foreground-color "white")
+;;(set-foreground-color "white")
 
 ;; Set emacs background colour
-(set-background-color "black")
+;;(set-background-color "black")
 
 
 ;; Require YAML-Mode
@@ -53,4 +53,7 @@
 ;; ENTER key in Emacs does 'newline-and-indent'
 (add-hook 'yaml-mode-hook
       '(lambda ()
-        (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+         (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+;; Load Rinari
+(add-hook 'ruby-mode-hook 'rinari-minor-mode)
