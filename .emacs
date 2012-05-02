@@ -58,3 +58,18 @@
 ;; Load Rinari
 (require 'rinari )
 (add-hook 'ruby-mode-hook 'rinari-minor-mode)
+
+;; =============  Load a nice font ===============
+;; ===== It is safe to comment out the lines below if you dont need
+;; the fancy font. ========
+
+;; Snippet taken from http://emacswiki.org/EmacsChannelFaq#toc5
+;; Set font size to 13pt
+(let ((13pt (round (* 13.1 10))))
+  (set-face-attribute 'default (not 'this-frame-only)
+                      :height 13pt))
+
+;; Set font to Dejavu sans mono
+(set-face-attribute 'default (not 'this-frame-only)
+                    :font "Droid Sans Mono Slashed")
+;; === End nice font section ==============

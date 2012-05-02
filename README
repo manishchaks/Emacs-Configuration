@@ -1,1 +1,19 @@
-This is the .emacs that I use.
+This is my Emacs configuration file.
+I use Emacs mainly for Ruby on Rails development - this configuration reflects that.
+I am an Emacs newbie and this the usual disclaimers apply.
+
+To use this Emacs configuration:
+
+Clone my git repo
+- Clone this using a 'git clone git://github.com/manishchaks/Emacs-Configuration.git'
+
+Create symlinks for emacs configuration and directory
+- ln -s Emacs-Configuration/.emacs ~/.emacs
+- ln -s Emacs-Configuration/.emacs.d ~/.emacs.d
+
+OPTIONAL step:
+- I find the Droid Sans Mono Slashed to be a very good font. To install it go the fonts dir, unzip it and install it. ( On OSX you just unzip the file and double-click it )
+- The .emacs configuration takes care of loading the font for you.
+
+If you do not want to load the font, just comment out the "Load a nice font" section"
+
