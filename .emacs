@@ -40,10 +40,10 @@
 (set-mouse-color "goldenrod")
 
 ;; Set region background colour
-;;(set-foreground-color "white")
+(set-foreground-color "white")
 
 ;; Set emacs background colour
-;;(set-background-color "black")
+(set-background-color "black")
 
 
 ;; Require YAML-Mode
@@ -56,4 +56,5 @@
          (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 ;; Load Rinari
+(require 'rinari )
 (add-hook 'ruby-mode-hook 'rinari-minor-mode)
