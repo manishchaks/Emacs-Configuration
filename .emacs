@@ -40,10 +40,10 @@
 (set-mouse-color "goldenrod")
 
 ;; Set region background colour
-(set-foreground-color "white")
+;;(set-foreground-color "white")
 
 ;; Set emacs background colour
-(set-background-color "black")
+;;(set-background-color "black")
 
 
 ;; Require YAML-Mode
@@ -87,3 +87,4 @@
  )
 
 (global-hl-line-mode 1)
+(blink-cursor-mode 1)
