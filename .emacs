@@ -88,3 +88,6 @@
 
 (global-hl-line-mode 1)
 (blink-cursor-mode 1)
+
+; Set cursor color to black
+(set-cursor-color "#000000")
