@@ -71,7 +71,7 @@
 
 ;; Set font to Dejavu sans mono
 (set-face-attribute 'default (not 'this-frame-only)
-                    :font "Droid Sans Mono Slashed")
+                    :font "Lucida Sans")
 ;; === End nice font section ==============
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -86,8 +86,15 @@
   ;; If there is more than one, they won't work right.
  )
 
+
+;; My custom theme stuff
+
 (global-hl-line-mode 1)
 (blink-cursor-mode 1)
 
-; Set cursor color to black
-(set-cursor-color "#000000")
+; Set cursor color to White
+(set-cursor-color "#FFFFFF" )
+(set-background-color "Black")
+(set-foreground-color "White")
+
+(require 'rspec-mode)
