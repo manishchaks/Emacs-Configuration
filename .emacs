@@ -50,3 +50,32 @@
 
 
 (require 'rspec-mode)
+
+;; config for full-ack
+(autoload 'ack-same "full-ack" nil t)
+(autoload 'ack "full-ack" nil t)
+(autoload 'ack-find-same-file "full-ack" nil t)
+(autoload 'ack-find-file "full-ack" nil t)
+
+;; add support for rhtml
+(add-to-list 'load-path "~/Code/rhtml")
+(require 'rhtml-mode)
+
+;; indent the whole god-damn buffer
+(defun iwb ()
+  "indent whole buffer"
+  (interactive)
+  (delete-trailing-whitespace)
+  (indent-region (point-min) (point-max) nil)
+  (untabify (point-min) (point-max)))
+
+;; setting the size of the emacs GUI window properly
+;; This is important because I have a netbook
+
+
+(setq default-frame-alist
+      '((top . 200) (left . 400)
+        (width . 70) (height . 30)
+))
+
+(setq initial-frame-alist '((top . 10) (left . 30)))
