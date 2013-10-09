@@ -1,15 +1,13 @@
-(when
-    (load
-     (expand-file-name "~/.emacs.d/package.el"))
-  (package-initialize))
-
 (add-to-list 'load-path (expand-file-name "~/.emacs.d"))
 
 (require 'package)
-(add-to-list 'package-archives
-             '("elpa" . "http://tromey.com/elpa/"))
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+(setq package-archives
+          '(("gnu"         . "http://elpa.gnu.org/packages/")
+            ("original"    . "http://tromey.com/elpa/")
+            ("org"         . "http://orgmode.org/elpa/")
+            ("marmalade"   . "http://marmalade-repo.org/packages/")
+            ("melpa"       . "http://melpa.milkbox.net/packages/")))
+    (package-initialize)
 (package-initialize)
 
 (when (not package-archive-contents)
@@ -17,8 +15,7 @@
 
 ;; Add in your own as you wish:
 (defvar my-packages '(starter-kit starter-kit-ruby starter-kit-js starter-kit-lisp starter-kit-bindings yaml-mode rvm rspec-mode rinari anything ruby-mode full-ack rvm)
-  "A list of packages to ensure are installed at launch.")
-
+ "A list of packages to ensure are installed at launch.")
 (dolist (p my-packages)
   (when (not (package-installed-p p))    (package-install p)))
 
@@ -79,3 +76,6 @@
 ))
 
 (setq initial-frame-alist '((top . 10) (left . 30)))
+
+;; line numbers globally
+(global-linum-mode 1)
