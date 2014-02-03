@@ -54,10 +54,6 @@
 (autoload 'ack-find-same-file "full-ack" nil t)
 (autoload 'ack-find-file "full-ack" nil t)
 
-;; add support for rhtml
-(add-to-list 'load-path "~/Code/rhtml")
-(require 'rhtml-mode)
-
 ;; indent the whole god-damn buffer
 (defun iwb ()
   "indent whole buffer"
@@ -79,3 +75,26 @@
 
 ;; line numbers globally
 (global-linum-mode 1)
+
+;; Load a nice font
+;; Snippet taken from http://emacswiki.org/EmacsChannelFaq#toc5
+;; Set font size to 11pt
+(let ((11pt (round (* 11.1 10))))
+  (set-face-attribute 'default (not 'this-frame-only)
+                      :height 11pt))
+
+;; Set font to Dejavu sans mono
+(set-face-attribute 'default (not 'this-frame-only)
+                    :font "Droid Sans Mono Slashed")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("2b5aa66b7d5be41b18cc67f3286ae664134b95ccc4a86c9339c886dfd736132d" "543976df2de12eb2ac235c79c7bc1dac6c58f4a34ae6f72237d6e70d8384f37a" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
