@@ -75,7 +75,8 @@
 
 ;; line numbers globally
 (global-linum-mode 1)
-
+(menu-bar-mode 0)
+(load-theme 'manoj-dark)
 ;; Load a nice font
 ;; Snippet taken from http://emacswiki.org/EmacsChannelFaq#toc5
 ;; Set font size to 11pt
