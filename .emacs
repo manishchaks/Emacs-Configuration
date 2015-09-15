@@ -1,4 +1,4 @@
-(add-to-list 'load-path (expand-file-name "~/.emacs.d"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 
 (require 'package)
 (setq package-archives
